@@ -31,8 +31,8 @@ services:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
       - OPENROUTER_MODEL=${OPENROUTER_MODEL:-}
       - VITE_SHOW_DEVTOOLS=false
-    ports:
-      - "127.0.0.1:${PORT:-3001}:${PORT:-3001}"
+    expose:
+      - "3001"
     volumes:
       - open_seo_data:/app/.wrangler
 volumes:
