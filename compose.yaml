@@ -36,7 +36,7 @@ services:
     volumes:
       - open_seo_data:/app/.wrangler
     labels:
-      - 'traefik.http.middlewares.openseo-auth.basicauth.users=${OPENSEO_BASIC_AUTH}'
+      - 'traefik.http.middlewares.openseo-auth.basicauth.users=${OPENSEO_BASIC_AUTH:?OPENSEO_BASIC_AUTH is required}'
       - 'coolify.traefik.middlewares=openseo-auth'
 volumes:
   open_seo_data:
